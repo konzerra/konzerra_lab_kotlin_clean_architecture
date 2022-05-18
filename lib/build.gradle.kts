@@ -46,12 +46,10 @@ java {
 }
 publishing {
     publications {
-        create<MavenPublication>("myLibrary") {
+        create<MavenPublication>("KonzerraLibrary") {
             from(components["java"])
         }
     }
-
-
 }
 sourceSets {
     main {

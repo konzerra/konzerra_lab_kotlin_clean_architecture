@@ -2,8 +2,10 @@ package konzerra_lab_kotlin_clean_architecture.generic.port.`in`.crud.abstract_i
 
 import konzerra_lab_kotlin_clean_architecture.generic.data.EntityI
 import konzerra_lab_kotlin_clean_architecture.generic.data.ResponseDtoI
+import konzerra_lab_kotlin_clean_architecture.generic.port.`in`.crud.InPortFindAll
 import konzerra_lab_kotlin_clean_architecture.generic.usecase.crud.UseCaseFindAll
 
-abstract class InPortFindAllAbstractImpl<Entity:EntityI,ResponseDto: ResponseDtoI> {
+abstract class InPortFindAllAbstractImpl<Entity:EntityI,ResponseDto: ResponseDtoI>
+    : InPortFindAll<ResponseDto> {
     protected abstract val useCaseFindAll:UseCaseFindAll<Entity,ResponseDto>
 }
